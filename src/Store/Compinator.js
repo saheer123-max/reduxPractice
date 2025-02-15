@@ -1,39 +1,17 @@
-const { combineReducers, createStore } = require("redux");
+import { createSlice } from "@reduxjs/toolkit";
 
-// Counter Reducer
-function counterReducer(state = { count: 0 }, action) {
-  switch (action.type) {
-    case "INCREMENT":
-      return { count: state.count + 1 };
-    case "DECREMENT":
-      return { count: state.count - 1 };
-    default:
-      return state;
-  }
-}
-
-// User Reducer
-function userReducer(state = { name: "Guest" }, action) {
-  switch (action.type) {
-    case "SET_USER":
-      return { name: action.payload };
-    default:
-      return state;
-  }
-}
-
-// Combine Reducers
-const rootReducer = combineReducers({
-  counter: counterReducer,
-  user: userReducer,
+const authSlice = createSlice({
+  name: "auth",
+  initialState: { isAuthenticated: false },
+  reducers: {
+    login: (state) => {
+      state.isAuthenticated = true;
+    },
+    logout: (state) => {
+      state.isAuthenticated = false;
+    },
+  },
 });
 
-// Create Store
-const store = createStore(rootReducer);
-
-// Subscribe
-store.subscribe(() => console.log("Updated State:", store.getState()));
-
-// Dispatch Actions
-store.dispatch({ type: "INCREMENT" }); 
-store.dispatch({ type: "SET_USER", payload: "Saheer" });
+export const { login, logout } = authSlice.actions;
+export default authSlice.reducer;
