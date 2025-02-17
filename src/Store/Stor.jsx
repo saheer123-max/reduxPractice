@@ -39,12 +39,26 @@
 
 
 
-import { configureStore } from "@reduxjs/toolkit";
-import addlist from "./AddTodo";
- const stor=configureStore({
-   reducer:{
-      todo:addlist
-   }
+// import { configureStore } from "@reduxjs/toolkit";
+// import addlist from "./AddTodo";
+//  const stor=configureStore({
+//    reducer:{
+//       todo:addlist
+//    }
       
- })
- export default stor
+//  })
+//  export default stor
+
+
+
+import { configureStore } from "@reduxjs/toolkit";
+import changecolur from "./colurslice";
+const stor=configureStore({
+  reducer:{
+    theme:changecolur
+  }
+
+}
+
+)
+export  default stor

@@ -31,12 +31,12 @@
 
 
 import React from 'react';
-import Todolist from './Store/Todolist';
+import Colur from './Store/Colur';
 
 function App() {
   return (
     <div>
-       <Todolist/>
+<Colur/>
 
     </div>
   );
