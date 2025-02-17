@@ -39,16 +39,12 @@
 
 
 
-
- import { configureStore } from "@reduxjs/toolkit";
-import addtodo from "./AddTodo";
-
- let stor=configureStore(
-  {
-  reducer:{
-     todo:addtodo
-  }
-
-  }
- )
+import { configureStore } from "@reduxjs/toolkit";
+import addlist from "./AddTodo";
+ const stor=configureStore({
+   reducer:{
+      todo:addlist
+   }
+      
+ })
  export default stor
