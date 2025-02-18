@@ -51,14 +51,25 @@
 
 
 
+// import { configureStore } from "@reduxjs/toolkit";
+// import changecolur from "./colurslice";
+// const stor=configureStore({
+//   reducer:{
+//     theme:changecolur
+//   }
+
+// }
+
+// )
+// export  default stor
+
+
+
 import { configureStore } from "@reduxjs/toolkit";
-import changecolur from "./colurslice";
+import productslice from "./Productslice";
 const stor=configureStore({
   reducer:{
-    theme:changecolur
+     pro:productslice
   }
-
-}
-
-)
-export  default stor
+})
+export default stor

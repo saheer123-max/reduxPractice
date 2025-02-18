@@ -31,12 +31,12 @@
 
 
 import React from 'react';
-import Colur from './Store/Colur';
+import Productr from './Store/Productr';
 
 function App() {
   return (
     <div>
-<Colur/>
+<Productr/>
 
     </div>
   );
